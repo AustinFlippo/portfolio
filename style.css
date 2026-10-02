@@ -1,0 +1,5 @@
+/* One stylesheet shared by every page (Lab 2 will make it prettier) */
+body {
+  /* Lab-required rule: readable system font at a comfortable line height */
+  font: 100% / 1.5 system-ui;
+}
