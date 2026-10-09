@@ -12,7 +12,7 @@
     <a href="../index.html">Home</a>
     <a href="../projects/index.html">Projects</a>
     <a href="../resume/index.html">Resume</a>
-    <a href="index.html">Contact</a>
+    <a href="index.html" class="current">Contact</a>
     <a href="https://github.com/AustinFlippo" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/atmflippo" target="_blank">LinkedIn</a>
   </nav>
@@ -30,27 +30,19 @@
 
   <!-- mailto: form opens the visitor's email app with a pre-addressed message -->
   <form action="mailto:austinflippo31@gmail.com" method="POST" enctype="text/plain">
-    <p>
-      <label>
-        Your email:
-        <input type="email" name="email" required>
-      </label>
-    </p>
-    <p>
-      <label>
-        Subject:
-        <input type="text" name="subject">
-      </label>
-    </p>
-    <p>
-      <label>
-        Message:
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
+    <label>
+      <span>Your email:</span>
+      <input type="email" name="email" required>
+    </label>
+    <label>
+      <span>Subject:</span>
+      <input type="text" name="subject">
+    </label>
+    <label>
+      <span>Message:</span>
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+    <button type="submit">Send</button>
   </form>
 </body>
 </html>
