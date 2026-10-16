@@ -1,0 +1,711 @@
+{
+  "revision": "f6bc0432af81a31164cbc090d939d2114170c9dc",
+  "source_updated": "2021-09-15",
+  "source_sha256": "14b6b527131e250778e19c150564ad705c95aae40cc4d9fb4f7c688bb389fa4d",
+  "metadata_sha256": "46bbbbfd3e136a62a9d70239224c98e98b544524854fad0b541fd7dee69bb240",
+  "totals": {
+    "2000": {
+      "urban_population": 1557978291,
+      "estimated_residents": 617918366.7178342,
+      "share": 39.661551787170204
+    },
+    "2018": {
+      "urban_population": 2584112085,
+      "estimated_residents": 774495288.1003335,
+      "share": 29.97142781058328
+    }
+  },
+  "counts": {
+    "share_fell": 42,
+    "residents_rose": 39,
+    "both": 32
+  },
+  "countries": [
+    {
+      "code": "AGO",
+      "name": "Angola",
+      "2018": {
+        "share": 48.5999984741211,
+        "urban_population": 20184724,
+        "estimated_residents": 9809775.556005556
+      },
+      "2000": {
+        "share": 86.5,
+        "urban_population": 8212003,
+        "estimated_residents": 7103382.595
+      }
+    },
+    {
+      "code": "ARG",
+      "name": "Argentina",
+      "2000": {
+        "share": 32.9000015258789,
+        "urban_population": 32867365,
+        "estimated_residents": 10813363.586516187
+      },
+      "2018": {
+        "share": 14.6999998092651,
+        "urban_population": 40877099,
+        "estimated_residents": 6008933.475033105
+      }
+    },
+    {
+      "code": "BGD",
+      "name": "Bangladesh",
+      "2018": {
+        "share": 47.2000007629395,
+        "urban_population": 59115518,
+        "estimated_residents": 27902524.94701564
+      },
+      "2000": {
+        "share": 77.8000030517578,
+        "urban_population": 30114490,
+        "estimated_residents": 23429074.139021296
+      }
+    },
+    {
+      "code": "BEN",
+      "name": "Benin",
+      "2018": {
+        "share": 58.7999992370605,
+        "urban_population": 5433800,
+        "estimated_residents": 3195074.358543393
+      },
+      "2000": {
+        "share": 74.3000030517578,
+        "urban_population": 2631923,
+        "estimated_residents": 1955518.8693199155
+      }
+    },
+    {
+      "code": "BOL",
+      "name": "Bolivia",
+      "2000": {
+        "share": 54.2999992370605,
+        "urban_population": 5201396,
+        "estimated_residents": 2824357.9883164954
+      },
+      "2018": {
+        "share": 48.5,
+        "urban_population": 7881917,
+        "estimated_residents": 3822729.745
+      }
+    },
+    {
+      "code": "BRA",
+      "name": "Brazil",
+      "2018": {
+        "share": 16.2999992370605,
+        "urban_population": 181335496,
+        "estimated_residents": 29557684.464519873
+      },
+      "2000": {
+        "share": 31.5,
+        "urban_population": 141915772,
+        "estimated_residents": 44703468.18
+      }
+    },
+    {
+      "code": "BFA",
+      "name": "Burkina Faso",
+      "2000": {
+        "share": 65.9000015258789,
+        "urban_population": 2071323,
+        "estimated_residents": 1365001.8886058808
+      },
+      "2018": {
+        "share": 57.0999984741211,
+        "urban_population": 5798635,
+        "estimated_residents": 3311020.4965198524
+      }
+    },
+    {
+      "code": "CMR",
+      "name": "Cameroon",
+      "2018": {
+        "share": 33.7000007629395,
+        "urban_population": 14215415,
+        "estimated_residents": 4790594.963455017
+      },
+      "2000": {
+        "share": 48.4000015258789,
+        "urban_population": 7065360,
+        "estimated_residents": 3419634.3478088374
+      }
+    },
+    {
+      "code": "CAF",
+      "name": "Central African Republic",
+      "2018": {
+        "share": 95.4000015258789,
+        "urban_population": 1930199,
+        "estimated_residents": 1841409.8754524994
+      },
+      "2000": {
+        "share": 91.9000015258789,
+        "urban_population": 1370218,
+        "estimated_residents": 1259230.3629078674
+      }
+    },
+    {
+      "code": "TCD",
+      "name": "Chad",
+      "2000": {
+        "share": 93.9000015258789,
+        "urban_population": 1807913,
+        "estimated_residents": 1697630.334586563
+      },
+      "2018": {
+        "share": 86.9000015258789,
+        "urban_population": 3569009,
+        "estimated_residents": 3101468.8754587555
+      }
+    },
+    {
+      "code": "CHN",
+      "name": "China",
+      "2000": {
+        "share": 37.2999992370605,
+        "urban_population": 452999147,
+        "estimated_residents": 168968678.37489057
+      },
+      "2018": {
+        "share": 24.6000003814697,
+        "urban_population": 823827650,
+        "estimated_residents": 202661605.0426529
+      }
+    },
+    {
+      "code": "COL",
+      "name": "Colombia",
+      "2018": {
+        "share": 27.7999992370605,
+        "urban_population": 40115208,
+        "estimated_residents": 11152027.517945232
+      },
+      "2000": {
+        "share": 22.2999992370605,
+        "urban_population": 29309133,
+        "estimated_residents": 6535936.4353890475
+      }
+    },
+    {
+      "code": "COM",
+      "name": "Comoros",
+      "2000": {
+        "share": 65.4000015258789,
+        "urban_population": 152294,
+        "estimated_residents": 99600.27832382201
+      },
+      "2018": {
+        "share": 68.4000015258789,
+        "urban_population": 241082,
+        "estimated_residents": 164900.09167861938
+      }
+    },
+    {
+      "code": "CIV",
+      "name": "Cote d'Ivoire",
+      "2018": {
+        "share": 60.0999984741211,
+        "urban_population": 12729902,
+        "estimated_residents": 7650670.907757112
+      },
+      "2000": {
+        "share": 55.2999992370605,
+        "urban_population": 7101009,
+        "estimated_residents": 3926857.922823597
+      }
+    },
+    {
+      "code": "DOM",
+      "name": "Dominican Republic",
+      "2018": {
+        "share": 14.8000001907349,
+        "urban_population": 8615853,
+        "estimated_residents": 1275146.2604334387
+      },
+      "2000": {
+        "share": 21.0,
+        "urban_population": 5231292,
+        "estimated_residents": 1098571.32
+      }
+    },
+    {
+      "code": "EGY",
+      "name": "Egypt, Arab Rep.",
+      "2018": {
+        "share": 5.19999980926514,
+        "urban_population": 42030815,
+        "estimated_residents": 2185602.299832584
+      },
+      "2000": {
+        "share": 28.1000003814697,
+        "urban_population": 29457843,
+        "estimated_residents": 8277653.995372746
+      }
+    },
+    {
+      "code": "ETH",
+      "name": "Ethiopia",
+      "2018": {
+        "share": 64.3000030517578,
+        "urban_population": 22678264,
+        "estimated_residents": 14582124.444085691
+      },
+      "2000": {
+        "share": 88.5999984741211,
+        "urban_population": 9761537,
+        "estimated_residents": 8648721.633050766
+      }
+    },
+    {
+      "code": "GHA",
+      "name": "Ghana",
+      "2000": {
+        "share": 52.0999984741211,
+        "urban_population": 8469006,
+        "estimated_residents": 4412351.996773224
+      },
+      "2018": {
+        "share": 30.3999996185303,
+        "urban_population": 16687441,
+        "estimated_residents": 5072982.000342469
+      }
+    },
+    {
+      "code": "GTM",
+      "name": "Guatemala",
+      "2000": {
+        "share": 48.0999984741211,
+        "urban_population": 5253870,
+        "estimated_residents": 2527111.389832306
+      },
+      "2018": {
+        "share": 31.0,
+        "urban_population": 8345772,
+        "estimated_residents": 2587189.32
+      }
+    },
+    {
+      "code": "GIN",
+      "name": "Guinea",
+      "2000": {
+        "share": 57.2999992370605,
+        "urban_population": 2543832,
+        "estimated_residents": 1457615.716592101
+      },
+      "2018": {
+        "share": 50.0999984741211,
+        "urban_population": 4486525,
+        "estimated_residents": 2247748.956541062
+      }
+    },
+    {
+      "code": "HTI",
+      "name": "Haiti",
+      "2000": {
+        "share": 93.4000015258789,
+        "urban_population": 3013114,
+        "estimated_residents": 2814248.521976471
+      },
+      "2018": {
+        "share": 65.9000015258789,
+        "urban_population": 6148673,
+        "estimated_residents": 4051975.600821304
+      }
+    },
+    {
+      "code": "IND",
+      "name": "India",
+      "2018": {
+        "share": 35.2000007629395,
+        "urban_population": 460304169,
+        "estimated_residents": 162027070.99984235
+      },
+      "2000": {
+        "share": 41.5,
+        "urban_population": 292322757,
+        "estimated_residents": 121313944.155
+      }
+    },
+    {
+      "code": "IDN",
+      "name": "Indonesia",
+      "2000": {
+        "share": 34.4000015258789,
+        "urban_population": 88840036,
+        "estimated_residents": 30560973.739591364
+      },
+      "2018": {
+        "share": 30.6000003814697,
+        "urban_population": 148088731,
+        "estimated_residents": 45315152.25091364
+      }
+    },
+    {
+      "code": "IRQ",
+      "name": "Iraq",
+      "2000": {
+        "share": 16.8999996185303,
+        "urban_population": 16094909,
+        "estimated_residents": 2720039.559602799
+      },
+      "2018": {
+        "share": 45.7000007629395,
+        "urban_population": 27085314,
+        "estimated_residents": 12377988.70464456
+      }
+    },
+    {
+      "code": "KEN",
+      "name": "Kenya",
+      "2018": {
+        "share": 46.5,
+        "urban_population": 13891412,
+        "estimated_residents": 6459506.58
+      },
+      "2000": {
+        "share": 54.7999992370605,
+        "urban_population": 6358390,
+        "estimated_residents": 3484397.671489331
+      }
+    },
+    {
+      "code": "MDG",
+      "name": "Madagascar",
+      "2018": {
+        "share": 61.2000007629395,
+        "urban_population": 9767217,
+        "estimated_residents": 5977536.8785179565
+      },
+      "2000": {
+        "share": 84.0999984741211,
+        "urban_population": 4276115,
+        "estimated_residents": 3596212.649751663
+      }
+    },
+    {
+      "code": "MWI",
+      "name": "Malawi",
+      "2000": {
+        "share": 66.4000015258789,
+        "urban_population": 1628833,
+        "estimated_residents": 1081545.1368540192
+      },
+      "2018": {
+        "share": 65.0999984741211,
+        "urban_population": 3072916,
+        "estimated_residents": 2000468.269111023
+      }
+    },
+    {
+      "code": "MLI",
+      "name": "Mali",
+      "2000": {
+        "share": 75.4000015258789,
+        "urban_population": 3103975,
+        "estimated_residents": 2340397.1973629
+      },
+      "2018": {
+        "share": 47.2000007629395,
+        "urban_population": 8080574,
+        "estimated_residents": 3814030.9896498914
+      }
+    },
+    {
+      "code": "MEX",
+      "name": "Mexico",
+      "2000": {
+        "share": 19.8999996185303,
+        "urban_population": 73899942,
+        "estimated_residents": 14706088.176094113
+      },
+      "2018": {
+        "share": 16.0,
+        "urban_population": 101149483,
+        "estimated_residents": 16183917.28
+      }
+    },
+    {
+      "code": "MNG",
+      "name": "Mongolia",
+      "2000": {
+        "share": 64.9000015258789,
+        "urban_population": 1369716,
+        "estimated_residents": 888945.7049002075
+      },
+      "2018": {
+        "share": 38.2999992370605,
+        "urban_population": 2169853,
+        "estimated_residents": 831053.6824453344
+      }
+    },
+    {
+      "code": "MAR",
+      "name": "Morocco",
+      "2000": {
+        "share": 24.2000007629395,
+        "urban_population": 15357105,
+        "estimated_residents": 3716419.52716542
+      },
+      "2018": {
+        "share": 9.19999980926514,
+        "urban_population": 22501247,
+        "estimated_residents": 2070114.6810822783
+      }
+    },
+    {
+      "code": "MOZ",
+      "name": "Mozambique",
+      "2018": {
+        "share": 77.1999969482422,
+        "urban_population": 10615024,
+        "estimated_residents": 8194798.204055177
+      },
+      "2000": {
+        "share": 78.1999969482422,
+        "urban_population": 5153816,
+        "estimated_residents": 4030283.954718018
+      }
+    },
+    {
+      "code": "NAM",
+      "name": "Namibia",
+      "2000": {
+        "share": 33.9000015258789,
+        "urban_population": 580960,
+        "estimated_residents": 196945.44886474605
+      },
+      "2018": {
+        "share": 42.2999992370605,
+        "urban_population": 1224933,
+        "estimated_residents": 518146.6496545023
+      }
+    },
+    {
+      "code": "NPL",
+      "name": "Nepal",
+      "2018": {
+        "share": 49.2999992370605,
+        "urban_population": 5546094,
+        "estimated_residents": 2734224.2996866577
+      },
+      "2000": {
+        "share": 64.0,
+        "urban_population": 3207389,
+        "estimated_residents": 2052728.96
+      }
+    },
+    {
+      "code": "NIC",
+      "name": "Nicaragua",
+      "2018": {
+        "share": 42.2000007629395,
+        "urban_population": 3783741,
+        "estimated_residents": 1596738.7308676548
+      },
+      "2000": {
+        "share": 60.0,
+        "urban_population": 2797499,
+        "estimated_residents": 1678499.4
+      }
+    },
+    {
+      "code": "NER",
+      "name": "Niger",
+      "2000": {
+        "share": 82.5999984741211,
+        "urban_population": 1834126,
+        "estimated_residents": 1514988.0480134583
+      },
+      "2018": {
+        "share": 58.7999992370605,
+        "urban_population": 3686235,
+        "estimated_residents": 2167506.1518762573
+      }
+    },
+    {
+      "code": "NGA",
+      "name": "Nigeria",
+      "2000": {
+        "share": 69.5999984741211,
+        "urban_population": 42603694,
+        "estimated_residents": 29652170.37391922
+      },
+      "2018": {
+        "share": 53.9000015258789,
+        "urban_population": 98611151,
+        "estimated_residents": 53151411.89368674
+      }
+    },
+    {
+      "code": "PAK",
+      "name": "Pakistan",
+      "2000": {
+        "share": 48.7000007629395,
+        "urban_population": 46947761,
+        "estimated_residents": 22863559.965183016
+      },
+      "2018": {
+        "share": 40.0999984741211,
+        "urban_population": 77815624,
+        "estimated_residents": 31204064.036627814
+      }
+    },
+    {
+      "code": "PER",
+      "name": "Peru",
+      "2000": {
+        "share": 46.2000007629395,
+        "urban_population": 19326872,
+        "estimated_residents": 8929015.011452341
+      },
+      "2018": {
+        "share": 33.0999984741211,
+        "urban_population": 24921877,
+        "estimated_residents": 8249140.906722337
+      }
+    },
+    {
+      "code": "PHL",
+      "name": "Philippines",
+      "2018": {
+        "share": 42.9000015258789,
+        "urban_population": 50026969,
+        "estimated_residents": 21461570.464350965
+      },
+      "2000": {
+        "share": 47.2000007629395,
+        "urban_population": 35981497,
+        "estimated_residents": 16983266.858517054
+      }
+    },
+    {
+      "code": "RWA",
+      "name": "Rwanda",
+      "2018": {
+        "share": 42.0999984741211,
+        "urban_population": 2117292,
+        "estimated_residents": 891379.8996926881
+      },
+      "2000": {
+        "share": 79.6999969482422,
+        "urban_population": 1184182,
+        "estimated_residents": 943793.0178616334
+      }
+    },
+    {
+      "code": "SEN",
+      "name": "Senegal",
+      "2000": {
+        "share": 48.9000015258789,
+        "urban_population": 3950445,
+        "estimated_residents": 1931767.6652790066
+      },
+      "2018": {
+        "share": 29.5,
+        "urban_population": 7481973,
+        "estimated_residents": 2207182.035
+      }
+    },
+    {
+      "code": "ZAF",
+      "name": "South Africa",
+      "2000": {
+        "share": 33.2000007629395,
+        "urban_population": 25582582,
+        "estimated_residents": 8493417.419179624
+      },
+      "2018": {
+        "share": 25.6000003814697,
+        "urban_population": 38348227,
+        "estimated_residents": 9817146.258286867
+      }
+    },
+    {
+      "code": "TZA",
+      "name": "Tanzania",
+      "2018": {
+        "share": 40.0999984741211,
+        "urban_population": 19020429,
+        "estimated_residents": 7627191.738771287
+      },
+      "2000": {
+        "share": 70.0999984741211,
+        "urban_population": 7473331,
+        "estimated_residents": 5238804.916966018
+      }
+    },
+    {
+      "code": "TUR",
+      "name": "Turkey",
+      "2000": {
+        "share": 17.8999996185303,
+        "urban_population": 40942335,
+        "estimated_residents": 7328677.808817398
+      },
+      "2018": {
+        "share": 8.60000038146973,
+        "urban_population": 61872814,
+        "estimated_residents": 5321062.240026057
+      }
+    },
+    {
+      "code": "UGA",
+      "name": "Uganda",
+      "2000": {
+        "share": 75.0,
+        "urban_population": 3496913,
+        "estimated_residents": 2622684.75
+      },
+      "2018": {
+        "share": 48.2999992370605,
+        "urban_population": 10158400,
+        "estimated_residents": 4906507.122497554
+      }
+    },
+    {
+      "code": "VNM",
+      "name": "Vietnam",
+      "2018": {
+        "share": 13.8000001907349,
+        "urban_population": 34319153,
+        "estimated_residents": 4736043.179458602
+      },
+      "2000": {
+        "share": 48.7999992370605,
+        "urban_population": 19477364,
+        "estimated_residents": 9504953.483399495
+      }
+    },
+    {
+      "code": "ZMB",
+      "name": "Zambia",
+      "2018": {
+        "share": 54.5999984741211,
+        "urban_population": 7551639,
+        "estimated_residents": 4123194.778771134
+      },
+      "2000": {
+        "share": 57.2000007629395,
+        "urban_population": 3624956,
+        "estimated_residents": 2073474.8596562212
+      }
+    },
+    {
+      "code": "ZWE",
+      "name": "Zimbabwe",
+      "2000": {
+        "share": 3.29999995231628,
+        "urban_population": 4010951,
+        "estimated_residents": 132361.38108742936
+      },
+      "2018": {
+        "share": 33.5,
+        "urban_population": 4650597,
+        "estimated_residents": 1557949.995
+      }
+    }
+  ]
+}
