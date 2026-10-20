@@ -26,21 +26,10 @@ for year in ("2000", "2018"):
             marks.append(f'<path d="M{x},{y} L{x},{y-radius} A{radius},{radius} 0 {int(fraction > .5)},1 {ex},{ey} Z" fill="#46694f"/>')
     (ASSETS / f"share-{year}.svg").write_text(svg(260, 260, f"{year}: {share:.1f}% of urban residents in slum conditions", "One hundred circles, each one percentage point. Filled area uses the unrounded share; the final filled circle is a proportional sector.", "".join(marks)))
 
-    value = DATA["totals"][year]["estimated_residents"] / 5_000_000
-    baseline = DATA["totals"]["2000"]["estimated_residents"] / 5_000_000
-    squares = []
-    for i in range(math.ceil(value)):
-        x, y = 10 + (i % 13) * 29, 10 + (i // 13) * 29
-        fraction = min(1, value - i)
-        base_fraction = max(0, min(fraction, baseline - i))
-        if base_fraction:
-            squares.append(f'<rect x="{x}" y="{y}" width="{21*base_fraction}" height="21" fill="#867563"/>')
-        if fraction > base_fraction:
-            squares.append(f'<rect x="{x+21*base_fraction}" y="{y}" width="{21*(fraction-base_fraction)}" height="21" fill="#a34028"/>')
-    count = DATA["totals"][year]["estimated_residents"] / 1_000_000
-    (ASSETS / f"residents-{year}.svg").write_text(svg(385, 354, f"{year}: {count:.1f} million estimated residents in slum conditions", "Each square represents five million estimated residents; partial squares preserve exact areas. Both years use the same unit, spacing, columns and frame. Rust marks the arithmetic increase above the 2000 count, not a cohort of identifiable new residents.", "".join(squares)))
-
-for name, n, fill, empty in (("share-tally", DATA["counts"]["share_fell"], "#46694f", "#e7e6dc"), ("residents-tally", DATA["counts"]["residents_rose"], "#a34028", "#e1d6c5")):
-    marks = ''.join(f'<rect x="{(i%7)*13}" y="{(i//7)*13}" width="9" height="9" fill="{fill if i<n else empty}"/>' for i in range(49))
-    (ASSETS / f"{name}.svg").write_text(svg(87, 87, f"{n} of 49 countries", "Each square represents one country. Dark marks indicate the highlighted direction of change; pale marks indicate the opposite direction.", marks))
-print("Rendered 6 SVG figures from the fixed-panel data.")
+baseline = DATA["totals"]["2000"]["estimated_residents"]
+total = DATA["totals"]["2018"]["estimated_residents"]
+baseline_width = 800 * baseline / total
+increase_width = 800 - baseline_width
+strip = f'<rect width="{baseline_width}" height="44" fill="#867563"/><rect x="{baseline_width}" width="{increase_width}" height="44" fill="#a34028"/>'
+(ASSETS / "residents-ledger.svg").write_text(svg(800, 44, "617.9 million plus 156.6 million equals 774.5 million estimated residents", "A single proportional strip. The neutral segment represents the 2000 estimate; the rust segment represents the increase. Its geometry uses full-precision counts, not the rounded display labels. This is an arithmetic decomposition, not a tracked population cohort.", strip))
+print("Rendered 3 SVG figures from the fixed-panel data.")

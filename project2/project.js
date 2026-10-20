@@ -36,12 +36,3 @@ fetch('data/housing.json')
   .catch(() => {
     statusElement.textContent = 'The searchable table could not load. Download the CSV extract above to inspect every record.';
   });
-
-let previouslyOpen = [];
-window.addEventListener('beforeprint', () => {
-  previouslyOpen = [...document.querySelectorAll('details')].map(element => [element, element.open]);
-  for (const [element] of previouslyOpen) element.open = true;
-});
-window.addEventListener('afterprint', () => {
-  for (const [element, open] of previouslyOpen) element.open = open;
-});
