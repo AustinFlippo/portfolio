@@ -1,0 +1,99 @@
+{
+  "revision": "f6bc0432af81a31164cbc090d939d2114170c9dc",
+  "source_sha256": "14b6b527131e250778e19c150564ad705c95aae40cc4d9fb4f7c688bb389fa4d",
+  "country_count": 49,
+  "country_codes": [
+    "AGO",
+    "ARG",
+    "BEN",
+    "BFA",
+    "BGD",
+    "BOL",
+    "BRA",
+    "CAF",
+    "CHN",
+    "CIV",
+    "CMR",
+    "COL",
+    "COM",
+    "DOM",
+    "EGY",
+    "ETH",
+    "GHA",
+    "GIN",
+    "GTM",
+    "HTI",
+    "IDN",
+    "IND",
+    "IRQ",
+    "KEN",
+    "MAR",
+    "MDG",
+    "MEX",
+    "MLI",
+    "MNG",
+    "MOZ",
+    "MWI",
+    "NAM",
+    "NER",
+    "NGA",
+    "NIC",
+    "NPL",
+    "PAK",
+    "PER",
+    "PHL",
+    "RWA",
+    "SEN",
+    "TCD",
+    "TUR",
+    "TZA",
+    "UGA",
+    "VNM",
+    "ZAF",
+    "ZMB",
+    "ZWE"
+  ],
+  "totals": {
+    "2000": {
+      "urban_population": 1557978291,
+      "estimated_residents": 617918366.7178342,
+      "share": 39.6615517871702
+    },
+    "2005": {
+      "urban_population": 1818768880,
+      "estimated_residents": 643881138.1676084,
+      "share": 35.40203184956675
+    },
+    "2014": {
+      "urban_population": 2333372987,
+      "estimated_residents": 662127030.7060622,
+      "share": 28.376390504003986
+    },
+    "2018": {
+      "urban_population": 2584112085,
+      "estimated_residents": 774495288.1003335,
+      "share": 29.97142781058328
+    }
+  },
+  "omitted_observation_years": {
+    "2010": {
+      "countries_present": 42,
+      "missing_countries": [
+        "BFA",
+        "COM",
+        "GIN",
+        "MEX",
+        "MNG",
+        "NIC",
+        "PER"
+      ]
+    },
+    "2016": {
+      "countries_present": 48,
+      "missing_countries": [
+        "CHN"
+      ]
+    }
+  },
+  "selection": "All years from 2000 through 2018 with both indicators for every country in the original sample. No interpolation."
+}

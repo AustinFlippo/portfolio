@@ -15,7 +15,7 @@
     <nav aria-label="Report sections">
       <a href="#case-for">For</a>
       <a href="#case-against">Against</a>
-      <a href="#design">Design &amp; evidence</a>
+      <a href="#methods">Evidence</a>
     </nav>
   </header>
 
@@ -23,6 +23,11 @@
     <section class="introduction" aria-labelledby="page-title">
       <p class="eyebrow">Project 2 : DSC 106</p>
       <h1 id="page-title">What counts as progress?</h1>
+      <address class="group-credits" aria-label="Project authors">
+        <span>Austin Flippo <a href="mailto:aflippo@ucsd.edu">aflippo@ucsd.edu</a></span>
+        <span>David Li <a href="mailto:dal079@ucsd.edu">dal079@ucsd.edu</a></span>
+        <span>Ryan Namdar <a href="mailto:rnamdar@ucsd.edu">rnamdar@ucsd.edu</a></span>
+      </address>
       <p class="proposition"><span>The proposition</span>Between 2000 and 2018, cities in the 49-country sample made substantial progress against slum housing conditions.</p>
       <p class="fiction-note">Two fictional publications argue opposite sides using the same World Bank data.</p>
     </section>
@@ -35,23 +40,36 @@
       </header>
       <h2 id="for-headline">Slum housing became<br class="desktop-break"> less prevalent.</h2>
       <figure class="primary-figure">
-        <div class="share-comparison">
-          <div class="year-field">
-            <h3>2000</h3>
-            <p class="share-value">39.7<span>%</span></p>
-            <img src="figures/share-2000.svg" width="260" height="260" alt="2000: 39.7% of the panel's urban population lived in slum conditions.">
-          </div>
-          <div class="year-field">
-            <h3>2018</h3>
-            <p class="share-value">30.0<span>%</span></p>
-            <img src="figures/share-2018.svg" width="260" height="260" alt="2018: 30.0% of the panel's urban population lived in slum conditions.">
-          </div>
+        <p class="figure-unit">Share of urban residents living in slum conditions</p>
+        <div class="timeline-chart share-chart" role="img" aria-label="Population-weighted shares for the same 49 countries. 2000, 39.7 percent. 2005, 35.4 percent. 2014, 28.4 percent. 2018, 30.0 percent. All bars use a zero to 100 percent scale.">
+          <div class="timeline-axis" aria-hidden="true"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></div>
+          <div class="timeline-row"><span class="timeline-year">2000</span><div class="timeline-track"><span class="share-bar" style="width:39.6615517871702%"></span></div><span class="timeline-value">39.7%</span></div>
+          <div class="timeline-row"><span class="timeline-year">2005</span><div class="timeline-track"><span class="share-bar" style="width:35.40203184956675%"></span></div><span class="timeline-value">35.4%</span></div>
+          <div class="timeline-row"><span class="timeline-year">2014</span><div class="timeline-track"><span class="share-bar" style="width:28.376390504003986%"></span></div><span class="timeline-value">28.4%</span></div>
+          <div class="timeline-row"><span class="timeline-year">2018</span><div class="timeline-track"><span class="share-bar" style="width:29.97142781058328%"></span></div><span class="timeline-value">30.0%</span></div>
         </div>
-        <figcaption><strong>The share fell by 9.7 percentage points, nearly one quarter of its 2000 level.</strong> Each grid represents 100% of that year’s urban population. Filled dots show the share living in slum conditions. One full dot equals one percentage point, and partly filled dots show the remaining fraction.</figcaption>
+        <figcaption><strong>The 2018 share was nearly one quarter below its 2000 level.</strong> It fell through 2014, then rose by 1.6 percentage points. The bars show every year with complete data for the same 49 countries, on a full 0–100% scale.</figcaption>
       </figure>
       <footer class="publication-source">World Bank / UN-HABITAT, September 2021 export. Population-weighted shares in a fixed 49-country sample. <a href="#methods">Source &amp; method</a></footer>
       <span class="folio" aria-hidden="true">1</span>
     </article>
+
+    <section id="design" class="report-section design-notes" aria-labelledby="for-design-title">
+      <h2 id="for-design-title">Design decisions and rationale</h2>
+      <p class="score-key">Scores run from <strong>−2 fully deceptive</strong> to <strong>+2 fully earnest</strong>. Each score reflects the choice’s benefits and limitations.</p>
+      <section class="rationale" id="for-rationale" aria-labelledby="for-rationale-title">
+        <header class="rationale-heading"><h3 id="for-rationale-title">Municipal Progress Review</h3><p class="summary-note">4 decisions</p></header>
+        <div class="rationale-content">
+          <p class="publisher-context">A fictional statistical bulletin for city planners and officials who manage development budgets. It uses consistent measurements and a formal style to appear trustworthy to these readers.</p>
+          <ol class="decision-list">
+            <li><span class="score negative">−1.5</span><div><h3>Judge progress by the falling share.</h3><p>The headline and percentage bars make the smaller share the main evidence of improvement. This is a reasonable way to ask how common these conditions are, but it leaves out the growing number of residents affected. We considered showing both measures together, which would give readers more context but weaken this argument. The negative score reflects that omission. The percentages are accurate, but a reader could take them as evidence that the housing problem became smaller overall.</p></div></li>
+            <li><span class="score positive">+2</span><div><h3>Use the same countries and population weights.</h3><p>Every country has both measures in all four years shown. We add the estimated counts and divide by the combined urban population to find the overall share. This means a change in which countries have data cannot explain the result. Simply averaging the country percentages would give a small country the same influence as a large one. We chose population weights because the chart describes residents. The positive score reflects this consistent calculation, although the sample excludes countries with missing records.</p></div></li>
+            <li><span class="score positive">+2</span><div><h3>Use bars and show every complete year.</h3><p>We replaced the circle grids with bars starting at zero because their lengths make the differences easier to compare. Every bar uses the full 0–100% scale. We include all four years with complete data for the original sample, rather than choosing years by whether they support the argument. The 2018 increase over 2014 remains visible and is stated in the caption. We considered a line chart, but separate bars avoid suggesting that we know what happened in the gaps between observations.</p></div></li>
+            <li><span class="score negative">−0.5</span><div><h3>Keep attention on the long-term decline.</h3><p>The muted green, serif headline, and small publication name are meant to resemble a statistical bulletin a planner might use. The caption compares 2018 with 2000, drawing attention to the overall improvement while also acknowledging the rise after 2014. We considered giving the recent increase the headline, which would tell a different story about the same record. We give the style a slightly negative score because an official-looking presentation can make this selected emphasis seem more trustworthy, even with a fictional publisher.</p></div></li>
+          </ol>
+        </div>
+      </section>
+    </section>
 
     <p class="section-label against-label">Against the proposition</p>
     <article id="case-against" class="publication ledger" aria-labelledby="against-headline">
@@ -62,37 +80,23 @@
       <h2 id="against-headline">The housing shortfall grew.</h2>
       <figure class="primary-figure ledger-figure">
         <p class="figure-unit">Estimated residents living in slum conditions, millions</p>
-        <div class="ledger-components">
-          <div><p class="account-label">2000</p><p class="account-number">617.9</p></div>
-          <div class="increase"><p class="account-label">Increase</p><p class="account-number">+156.6</p></div>
+        <div class="timeline-key" aria-hidden="true"><span><i class="base-key"></i>2000 count</span><span><i class="increase-key"></i>Increase since 2000</span></div>
+        <div class="timeline-chart count-chart" role="img" aria-label="Estimated residents in slum conditions in millions, same 49 countries. 2000, 617.9. 2005, 643.9. 2014, 662.1. 2018, 774.5. All bars start at zero on a scale to 800 million. Brown shows the 2000 count of 617.9 million. Red shows the increase since 2000, reaching 156.6 million in 2018.">
+          <div class="timeline-axis" aria-hidden="true"><span>0</span><span>200</span><span>400</span><span>600</span><span>800</span></div>
+          <div class="timeline-row"><span class="timeline-year">2000</span><div class="timeline-track"><span class="count-base" style="width:77.23979583972928%"></span><span class="count-increase" style="width:0%"></span></div><span class="timeline-value">617.9</span></div>
+          <div class="timeline-row"><span class="timeline-year">2005</span><div class="timeline-track"><span class="count-base" style="width:77.23979583972928%"></span><span class="count-increase" style="width:3.245346431221779%"></span></div><span class="timeline-value">643.9</span></div>
+          <div class="timeline-row"><span class="timeline-year">2014</span><div class="timeline-track"><span class="count-base" style="width:77.23979583972928%"></span><span class="count-increase" style="width:5.526082998528496%"></span></div><span class="timeline-value">662.1</span></div>
+          <div class="timeline-row"><span class="timeline-year">2018</span><div class="timeline-track"><span class="count-base" style="width:77.23979583972928%"></span><span class="count-increase" style="width:19.57211517281241%"></span></div><span class="timeline-value">774.5</span></div>
         </div>
-        <img class="ledger-strip" src="figures/residents-ledger.svg" width="800" height="44" alt="The 2000 estimate of 617.9 million plus an increase of 156.6 million equals 774.5 million in 2018. Segment lengths are proportional to the estimated counts.">
-        <div class="ledger-total"><p class="account-label">2018 total</p><p class="total-number">774.5<span> million</span></p></div>
-        <figcaption><strong>Substantial progress should mean fewer residents still living in these conditions. Instead, the estimated count rose by 25.3%.</strong> The brown part shows the 2000 count and the red part shows the increase. Together they make the 2018 total. The bar compares two estimates and does not follow the same people over time.</figcaption>
+        <figcaption><strong>Substantial progress should mean fewer residents still living in these conditions. Instead, the count rose at each complete time point, adding 156.6 million residents by 2018.</strong> Brown shows the 2000 count. Red shows how much each later estimate exceeds it. The total increase was 25.3%. These estimates do not follow the same people over time.</figcaption>
       </figure>
       <footer class="publication-source">World Bank / UN-HABITAT, September 2021 export. Derived estimates for the same 49-country sample. These are not global census totals. <a href="#methods">Source &amp; method</a></footer>
       <span class="folio" aria-hidden="true">2</span>
     </article>
 
-    <section id="design" class="report-section design-notes" aria-labelledby="design-title">
-      <p class="report-section-label">Design decisions</p>
-      <h2 id="design-title">What each argument leaves out</h2>
-      <p class="section-deck">The bulletin judges progress by whether these conditions became less common. The newspaper judges it by whether fewer people still experienced them. Both measures are valid, but each publication leaves out information that could change the reader’s conclusion.</p>
-      <p class="score-key">Scores run from <strong>−2 fully deceptive</strong> to <strong>+2 fully earnest</strong>. These are judgments about the choices, including their mixed effects.</p>
-
-      <section class="rationale" id="for-rationale" aria-labelledby="for-rationale-title">
-        <header class="rationale-heading"><h3 id="for-rationale-title">Municipal Progress Review</h3><p class="summary-note">4 decisions</p></header>
-        <div class="rationale-content">
-          <p class="publisher-context">A fictional statistical bulletin for city planners and officials who manage development budgets. It uses consistent measurements and a formal style to appear trustworthy to these readers.</p>
-          <ol class="decision-list">
-            <li><span class="score negative">−1.5</span><div><h3>Judge progress by the falling share.</h3><p>The headline and matching grids make the smaller percentage the main evidence of improvement. This is a reasonable way to ask how common these conditions are, but it leaves out the growing number of residents affected. We considered showing both measures together, which would give readers more context but weaken this argument. The negative score reflects that omission. The percentages are accurate, but a reader could take them as evidence that the housing problem became smaller overall.</p></div></li>
-            <li><span class="score positive">+2</span><div><h3>Use the same countries and population weights.</h3><p>Every country has both measures in both years. We add the estimated counts and divide by the combined urban population to find the overall share. This means a change in which countries have data cannot explain the result. Simply averaging the country percentages would give a small country the same influence as a large one. We chose population weights because the chart describes residents. The positive score reflects this consistent calculation, although the sample excludes countries with missing records.</p></div></li>
-            <li><span class="score positive">+2</span><div><h3>Keep the full 100% scale.</h3><p>Each grid contains 100 circles, with one circle representing one percentage point. The same full scale makes the decline visible without exaggerating it by cutting off part of the range. Partly filled circles preserve the calculated values. We considered a line chart, but a line between two years could suggest a steady change that we have not established. The grids show the size of each share well, while the labels and caption give the exact percentages and explain the decrease.</p></div></li>
-            <li><span class="score negative">−0.5</span><div><h3>Keep attention on the decline.</h3><p>The muted green, serif headline, and small publication name are meant to resemble a statistical bulletin a planner might use. Earlier versions included a country tally and an editorial quotation, but these repeated the argument and drew attention away from the main comparison. Removing them makes the percentages easier to focus on. The headline stays close to what the measure shows. We give the style a slightly negative score because an official-looking presentation can make this incomplete account seem more trustworthy, even with a fictional publisher.</p></div></li>
-          </ol>
-        </div>
-      </section>
-
+    <section class="report-section design-notes" aria-labelledby="against-design-title">
+      <h2 id="against-design-title">Design decisions and rationale</h2>
+      <p class="score-key">Scores run from <strong>−2 fully deceptive</strong> to <strong>+2 fully earnest</strong>. Each score reflects the choice’s benefits and limitations.</p>
       <section class="rationale" id="against-rationale" aria-labelledby="against-rationale-title">
         <header class="rationale-heading"><h3 id="against-rationale-title">The Housing Ledger</h3><p class="summary-note">4 decisions</p></header>
         <div class="rationale-content">
@@ -100,12 +104,11 @@
           <ol class="decision-list">
             <li><span class="score negative">−1.5</span><div><h3>Judge progress by the number still affected.</h3><p>The headline and caption ask readers to judge progress by whether fewer residents still live in slum conditions. The count rose by 25.3%, but the publication leaves out the falling percentage and the growth in the urban population. We considered putting the percentage beside the count, which would make the other interpretation easier to see. The negative score reflects this selective argument. More people needing better housing is a reason for concern, but it does not prove there was no improvement.</p></div></li>
             <li><span class="score positive">+1.5</span><div><h3>Calculate country estimates before adding them.</h3><p>We multiply each country’s reported percentage by its own urban population, divide by 100, and add the estimates. This keeps each percentage matched to the population it describes. Using a World percentage instead could introduce countries outside our sample. The calculation shows how many residents are affected, but countries define urban areas differently and the source gives no range of uncertainty. We label the results as estimates and round the displayed totals. The positive score recognizes the careful calculation while allowing for those limits.</p></div></li>
-            <li><span class="score positive">+2</span><div><h3>Show how the starting count and increase add up.</h3><p>The brown part shows the 2000 estimate, and the red part shows the increase. Together they make the 2018 total, with lengths based on the unrounded counts. We replaced a grid of repeated marks with this bar to make the addition easier to follow. Two bars starting at zero would compare the years more directly, but this design draws attention to the increase. The red part is about 20.2% of the final total. The caption’s 25.3% growth figure compares the increase with the smaller 2000 count.</p></div></li>
+            <li><span class="score positive">+2</span><div><h3>Compare four totals from the same zero baseline.</h3><p>Each bar shows the full count in that year. Brown consistently represents the 2000 count, and red shows the increase above it. We added a color key before the bars so readers can understand the red section immediately. The same four years appear in both publications, and all lengths use unrounded values on a 0–800 million scale. This replaces a single bar whose parts required more explanation. The red section is a difference in estimated counts, not a tracked group of residents.</p></div></li>
             <li><span class="score negative">−0.5</span><div><h3>Draw attention to the increase in red.</h3><p>The heavier newspaper title and red addition make the growing count stand out as a housing problem that still needs attention. The color changes what readers notice first without changing the amount shown. The caption also explains that the bar does not follow the same people over time. Using one color would give the increase less emphasis, while a brighter warning color could make the argument feel exaggerated. The slightly negative score reflects how the design draws attention to growing need while leaving out the falling percentage.</p></div></li>
           </ol>
         </div>
       </section>
-      <span class="folio" aria-hidden="true">3</span>
     </section>
 
     <section id="methods" class="report-section methods" aria-labelledby="methods-title">
@@ -129,10 +132,11 @@
         <h3>Source, definitions &amp; calculations</h3>
         <div class="details-copy">
           <p>We use the <a href="https://github.com/light-and-salt/World-Bank-Data-by-Indicators/tree/f6bc0432af81a31164cbc090d939d2114170c9dc/urban-development">urban-development dataset</a>, revision <code>f6bc043</code>, from the September 15, 2021 World Bank export. The sample includes every country with both required measures in both 2000 and 2018. We exclude totals for the world, regions, and income groups. We do not treat missing values as zeros or fill them in using nearby years.</p>
+          <p>Both charts show every year from 2000 through 2018 with both measures for all 49 countries. These years are 2000, 2005, 2014, and 2018. We omit 2010 because seven countries are missing and 2016 because China is missing. The other years have no complete country observations for these measures. The bars compare separate observations and do not imply a steady change between them. The summary table and country tallies above compare the two endpoints.</p>
           <p>The source’s “slum” measure concerns households lacking specified conditions such as water, sanitation, space, durable housing, or tenure security. It does not capture every kind of housing insecurity. Urban definitions differ between countries.</p>
           <p class="formula">Country estimate = urban population × reported share ÷ 100<br>Panel prevalence = sum of country estimates ÷ total urban population × 100</p>
-          <p>We round values only when displaying them. The source gives no range showing how far the estimates might be from the true counts. Comparing these two years does not follow the same people over time or show that a particular policy caused the change. The totals cover our sample, not the whole world.</p>
-          <p><a href="data/README.md">Provenance &amp; reproduction</a> · <a href="data/housing.json" download>Full-precision data (JSON)</a></p>
+          <p>We round values only when displaying them. The source gives no range showing how far the estimates might be from the true counts. Comparing these estimates does not follow the same people over time or show that a particular policy caused the change. The totals cover our sample, not the whole world.</p>
+          <p><a href="data/README.md">Provenance &amp; reproduction</a> · <a href="data/housing.json" download>Endpoint data (JSON)</a> · <a href="data/housing-timeline.json" download>Four-year totals (JSON)</a> · <a href="data/housing-timeline.csv" download>Four-year country records (CSV)</a></p>
         </div>
       </div>
 
@@ -147,7 +151,7 @@
           </div>
         </div>
       </details>
-      <span class="folio" aria-hidden="true">4</span>
+      <span class="folio" aria-hidden="true">3</span>
     </section>
 
     <section class="reflection report-section" aria-labelledby="reflection-title">
@@ -155,10 +159,10 @@
       <h2 id="reflection-title">Choosing a standard of progress</h2>
       <div class="reflection-copy">
         <p>Before choosing our proposition, we explored the World Bank data to understand which measures were available, what they described, and whether we could compare the same countries over time. We chose housing because we could combine the percentage living in slum conditions with the urban population to estimate how many people were affected. We used the 49 countries with both measures in both 2000 and 2018 so that both arguments would describe the same places. Once we had checked the measures and available years, calculating the counts was straightforward. We multiplied each country’s urban population by its reported percentage, divided by 100, and added the results. For the overall percentage, we used population weights so that each country’s influence reflected its number of urban residents. The share fell from 39.7% to 30.0%, while the count rose from 617.9 million to 774.5 million. What stood out was that 32 countries experienced both changes individually. This meant the disagreement was also present within countries, rather than being explained only by how we combined them. It gave us a reason to ask what “substantial progress” should mean while keeping our claim limited to the countries and years we studied.</p>
-        <p>The harder part was making each argument persuasive while keeping the charts easy to understand. We wrote Municipal Progress Review for city planners and budget officials who might judge progress by how common these conditions are. Its two grids of 100 circles give each year the same space, so the falling share is easy to see. We wrote The Housing Ledger for advocates and service providers concerned with how many people still need better housing. Its bar starts with the 2000 count and highlights the additional 156.6 million residents in red. The publication names, fonts, colors, and headlines help each chart look like something its intended readers might trust. Earlier versions included country tallies, editorial quotations, and another grid of population marks. During review, we found that these repeated the argument and competed for attention, so we removed them. The single bar makes the addition easier to follow, although two bars starting at zero would compare the years more directly. We also added captions explaining the size of the decline and why the opposing publication judges progress by the remaining count. The explanation of what each chart leaves out comes after both arguments. These revisions changed what readers notice and how we explain it, while keeping the calculations the same.</p>
+        <p>The harder part was making each argument persuasive while keeping the charts easy to understand. We wrote Municipal Progress Review for city planners and budget officials who might judge progress by how common these conditions are. We initially used two grids of circles, but feedback pointed out that the difference was hard to see. We replaced them with bars and added every intermediate year with complete data for the same countries. This also revealed that the share rose after 2014, which an endpoint comparison did not show. We kept that change visible. We wrote The Housing Ledger for advocates and service providers concerned with how many people still need better housing. Its original single bar made the red section difficult to interpret at first glance. Showing a full bar for each available year makes the rising totals easier to compare, and the color key explains that red means the increase above the 2000 count. Both publications now use the same four years. We left out years with missing countries rather than filling gaps or changing the sample. The publication names, fonts, colors, and headlines still give each side a reason to appear credible to its audience, while the explanations below the charts identify what each argument leaves out.</p>
         <p>This comparison showed us that correct numbers can still lead readers toward an incomplete conclusion. The falling share is evidence of improvement, while the growing count shows that more residents still experienced these conditions. Neither measure answers the whole question on its own. What surprised us was that we could make both arguments without changing a value or cutting off a scale. Choosing one measure and leaving out the other already did much of the work. That is why we gave negative scores to those choices and positive scores to the consistent sample, accurate marks, and clear calculations. We define ethical analysis and visualization as choosing measures that fit the question, explaining how they were calculated, and making claims the evidence can support. A publication can focus on percentages or counts, but readers should be able to find the information needed to question its argument. Our shared evidence section and downloadable country records make that possible, although we cannot assume every reader will look at them. We would draw a clear boundary at inventing quotes, replacing missing values with zeros, switching countries between arguments, calling this sample a global count, or claiming a policy caused changes that these data cannot explain. We identify both publishers as fictional and label the counts as estimates. Those choices help readers understand what the project can and cannot establish.</p>
       </div>
-      <span class="folio" aria-hidden="true">5</span>
+      <span class="folio" aria-hidden="true">4</span>
     </section>
 
     <footer class="report-footer">
