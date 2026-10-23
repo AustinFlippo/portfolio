@@ -1,0 +1,87 @@
+[
+  {
+    "title": "What counts as progress?",
+    "year": 2026,
+    "image": "project2/figures/share-2000.svg",
+    "imageAlt": "Dot chart showing urban residents in slum conditions in 2000",
+    "description": "Two opposing visual arguments about housing conditions, built from the same 49-country World Bank sample. DSC 106 Project 2.",
+    "url": "project2/"
+  },
+  {
+    "title": "Meshy Recommendation Feed",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "An end-to-end recommendation stack at Meshy AI: 54% more recommended-content likes and 21% more clicks across 10+ experiments, plus a real-time data layer behind 2x community WAU growth.",
+    "url": "https://www.meshy.ai"
+  },
+  {
+    "title": "ChatSight",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "An AI tutor analytics dashboard for courses serving 500+ students, built under Prof. Sam Lau at the DSTL Lab. Surfaces where students get stuck so tutors can help.",
+    "url": "https://dstl.ucsd.edu"
+  },
+  {
+    "title": "Portfolio: Web Foundations (Lab 1)",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "The HTML foundation of this portfolio, with home, projects, resume, and contact pages for DSC 106.",
+    "url": ""
+  },
+  {
+    "title": "Portfolio: CSS Styling (Lab 2)",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "A shared stylesheet with a responsive project grid, navigation styles, and a structured contact form.",
+    "url": ""
+  },
+  {
+    "title": "Portfolio: JavaScript Interactions (Lab 3)",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "Shared JavaScript navigation, automatic current-page highlighting, a persistent theme selector, and an improved email contact form.",
+    "url": "contact/"
+  },
+  {
+    "title": "Portfolio: Data and APIs (Lab 4)",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "Reusable project cards loaded from JSON, an automatic project count, and live GitHub profile statistics.",
+    "url": ""
+  },
+  {
+    "title": "TritonPlanner",
+    "year": 2025,
+    "image": "images/project-placeholder.svg",
+    "description": "An AI academic planner for UC San Diego, combining quarter planning and course search across 7,000+ courses.",
+    "url": "https://tritonplanner.com"
+  },
+  {
+    "title": "TritonPlanner: RAG Course Assistant",
+    "year": 2025,
+    "image": "images/project-placeholder.svg",
+    "description": "The course-search component of TritonPlanner, using OpenAI and Pinecone for hybrid semantic and keyword search over a scraped UCSD course catalog.",
+    "url": "https://tritonplanner.com"
+  },
+  {
+    "title": "iHARP Anomaly Prediction Hackathon (Finalist)",
+    "year": 2025,
+    "image": "images/project-placeholder.svg",
+    "description": "A CNN classifier for coastal anomaly prediction from 20 years of sea-level data, improved with pooling and weighted predictions.",
+    "url": "https://nsfhdr.org/html/mlchallenge.html"
+  },
+  {
+    "title": "Multilingual E-Learning Video Automation",
+    "year": 2025,
+    "image": "images/project-placeholder.svg",
+    "description": "A SvelteKit and Express.js tool built during my Meta-Skills internship to automate AI-avatar multilingual e-learning video generation, reducing manual work from hours to minutes.",
+    "url": "resume/"
+  },
+  {
+    "title": "East African Higher-Education Dataset",
+    "year": 2025,
+    "image": "images/project-placeholder.svg",
+    "description": "A geolocated dataset of 190+ education institutions, built with Pandas and BeautifulSoup for research on higher-education spillovers and student outcomes.",
+    "url": "resume/"
+  }
+]

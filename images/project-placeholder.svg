@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320">
+  <rect width="640" height="320" fill="#f0f0f3"/>
+  <g fill="none" stroke="#77717d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="250" y="80" width="140" height="110" rx="8"/>
+    <path d="m276 158 30-32 24 18 34-38"/>
+  </g>
+  <text x="320" y="237" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="#625b6a">Project preview</text>
+</svg>

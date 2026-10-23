@@ -7,19 +7,11 @@
   <title>Austin Flippo: Personal site and portfolio</title>
   <!-- One shared stylesheet for every page -->
   <link rel="stylesheet" href="style.css">
+  <script src="global.js" type="module"></script>
+  <script src="index.js" type="module"></script>
 </head>
 <body>
-  <!-- Same nav menu on every page; links use relative URLs -->
-  <nav>
-    <a href="index.html" class="current">Home</a>
-    <a href="projects/index.html">Projects</a>
-    <a href="resume/index.html">Resume</a>
-    <a href="contact/index.html">Contact</a>
-    <!-- External links open in a new tab -->
-    <a href="https://github.com/AustinFlippo" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/atmflippo" target="_blank">LinkedIn</a>
-  </nav>
-
+  <noscript><p>Enable JavaScript for navigation, themes, and project listings. <a href="index.html">Home</a> · <a href="projects/index.html">Projects</a> · <a href="contact/index.html">Contact</a></p></noscript>
   <h1>Austin Flippo</h1>
 
   <!-- Photo lives in images/, alt text describes it for screen readers -->
@@ -30,5 +22,15 @@
     I'm currently a DSC 10 tutor and a researcher at the DSTL lab, working on
     AI tutor analytics. This site collects my projects, resume, and contact info.
   </p>
+  <section aria-labelledby="latest-projects-title">
+    <h2 id="latest-projects-title">Latest Projects</h2>
+    <div class="projects"><p>Loading projects…</p></div>
+    <p><a href="projects/">View all projects</a></p>
+  </section>
+
+  <section aria-labelledby="github-title">
+    <h2 id="github-title">GitHub Stats</h2>
+    <div id="profile-stats" aria-live="polite"><p>Loading GitHub stats…</p></div>
+  </section>
 </body>
 </html>

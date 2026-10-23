@@ -1,6 +1,7 @@
 /* Shared styles for every page */
 
 html {
+  color-scheme: light dark;
   /* One accent for links, form controls, and hover states */
   --color-accent: oklch(65% 50% 0);
   accent-color: var(--color-accent);
@@ -13,6 +14,18 @@ body {
   max-width: 100ch;
   margin-inline: auto;
   padding: 1em;
+  padding-top: 3.5em;
+  background: Canvas;
+  color: CanvasText;
+}
+
+a {
+  color: light-dark(#a82460, #ff9dc8);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 h1,
@@ -26,14 +39,16 @@ h6 {
 }
 
 h1 {
-  font-size: 400%;
+  font-size: clamp(2.5rem, 8vw, 4rem);
 }
 
 /* Navigation */
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -45,21 +60,34 @@ nav a {
 }
 
 nav a.current {
-  border-bottom: 0.4em solid oklch(90% 3% 200);
+  border-bottom: 0.4em solid var(--border-color);
   padding-bottom: 0.1em;
 }
 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), Canvas 85%);
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
 }
 
 /* Contact form */
 input,
 textarea,
-button {
+button,
+select {
   font: inherit;
+}
+
+input,
+textarea {
+  min-width: 0;
 }
 
 form {
@@ -83,7 +111,7 @@ form button {
 /* Projects grid */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(15em, 100%), 1fr));
   gap: 1em;
 }
 
@@ -97,9 +125,39 @@ form button {
   margin: 0;
 }
 
+.projects h3 {
+  margin: 0;
+}
+
 .projects img {
   width: 100%;
-  height: auto;
+  height: 10rem;
+  object-fit: contain;
+  background: #f0f0f3;
+  border-radius: 0.25rem;
+}
+
+.project-year {
+  margin-block: 0.5em;
+  color: light-dark(#595959, #bfbfbf);
+  font-size: 0.9em;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  text-align: center;
+}
+
+#profile-stats dt {
+  color: light-dark(#595959, #bfbfbf);
+}
+
+#profile-stats dd {
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 /* Resume */
@@ -107,11 +165,25 @@ section {
   margin-block: 2em;
 }
 
-section h2 {
+section > h2 {
   border-bottom: 2px solid var(--color-accent);
   padding-bottom: 0.2em;
 }
 
 time {
-  color: oklch(45% 0 0);
+  color: light-dark(#595959, #bfbfbf);
+}
+
+@media (max-width: 35rem) {
+  nav a {
+    flex-basis: 25%;
+  }
+
+  #profile-stats dl {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
 }
