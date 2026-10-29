@@ -13,6 +13,16 @@
   <noscript><p>Enable JavaScript for navigation, themes, and project listings. <a href="../index.html">Home</a> · <a href="../projects/index.html">Projects</a> · <a href="../contact/index.html">Contact</a></p></noscript>
   <h1 class="projects-title">Projects</h1>
   <p>A selection of my data science projects, research, and DSC 106 assignments.</p>
+  <div class="project-summary">
+    <svg id="projects-plot" viewBox="-50 -50 100 100" role="group" aria-label="Filter projects by year"></svg>
+    <ul class="legend" aria-label="Projects per year"></ul>
+  </div>
+  <p>Search projects or select a year. Select the same year again to clear it.</p>
+  <div class="project-filters">
+    <input class="searchBar" type="search" aria-label="Search projects" placeholder="Search projects…">
+    <button id="reset-filters" type="button">Reset filters</button>
+  </div>
+  <p id="filter-status" role="status"></p>
   <div class="projects"><p>Loading projects…</p></div>
 </body>
 </html>

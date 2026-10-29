@@ -143,6 +143,92 @@ form button {
   font-size: 0.9em;
 }
 
+/* Lab 5: project year chart and filters */
+.project-summary {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-block: 1.5em;
+}
+
+#projects-plot {
+  flex: 0 0 12em;
+  width: 12em;
+  overflow: visible;
+}
+
+#projects-plot path {
+  cursor: pointer;
+  transition: opacity 200ms, fill 200ms;
+  stroke: Canvas;
+  stroke-width: 0.5;
+}
+
+#projects-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+#projects-plot path.selected {
+  fill: var(--color-accent);
+}
+
+.chart-empty {
+  fill: CanvasText;
+  font: 6px system-ui;
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+  gap: 0.75em;
+  list-style: none;
+  padding: 1em;
+  margin: 0;
+  border: 1px solid oklch(50% 10% 200 / 40%);
+  border-radius: 0.25em;
+}
+
+.legend button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+  padding: 0.4em;
+  border: 0;
+  border-radius: 0.25em;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.legend .swatch {
+  width: 1em;
+  height: 1em;
+  border-radius: 0.2em;
+  background: var(--color);
+}
+
+.legend li.selected {
+  --color: var(--color-accent) !important;
+}
+
+.legend button:hover,
+.legend .selected button {
+  background: color-mix(in oklch, var(--color-accent), Canvas 85%);
+}
+
+.project-filters {
+  display: flex;
+  gap: 0.75em;
+}
+
+.searchBar {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5em;
+}
+
 #profile-stats dl {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -175,6 +261,16 @@ time {
 }
 
 @media (max-width: 35rem) {
+  .project-summary {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1em;
+  }
+
+  #projects-plot {
+    align-self: center;
+  }
+
   nav a {
     flex-basis: 25%;
   }
