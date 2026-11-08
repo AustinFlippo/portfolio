@@ -283,3 +283,151 @@ time {
     grid-template-columns: 1fr;
   }
 }
+
+/* Lab 6: commit summary, scatterplot, and brush */
+.meta-intro p {
+  max-width: 64ch;
+}
+
+.meta-page .stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.meta-page .stats > div {
+  padding: 0.75rem;
+  border: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+  border-radius: 0.4rem;
+}
+
+.meta-page dt {
+  color: light-dark(#595959, #bfbfbf);
+  font-size: 0.875rem;
+}
+
+.meta-page .stats dd {
+  margin: 0.15rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+#chart svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+#chart .axis {
+  font-size: 15px;
+  pointer-events: none;
+}
+
+#chart .axis-label {
+  fill: currentColor;
+  font-size: 16px;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+#chart .gridlines {
+  color: light-dark(#41698b, #8ab2d3);
+  stroke-opacity: 0.23;
+  pointer-events: none;
+}
+
+#chart .gridlines .domain {
+  display: none;
+}
+
+#chart .gridlines .daytime {
+  color: light-dark(#a36024, #deb283);
+}
+
+#chart .dots circle {
+  fill: light-dark(steelblue, #80b9eb);
+  fill-opacity: 0.7;
+  cursor: pointer;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 200ms, fill-opacity 200ms;
+}
+
+#chart .dots circle:is(:hover, :focus-visible) {
+  transform: scale(1.5);
+  fill-opacity: 1;
+  stroke: CanvasText;
+  stroke-width: 1.5px;
+}
+
+#chart .dots circle.selected {
+  fill: #ff6b6b;
+}
+
+#chart .commit-brush .selection {
+  fill: light-dark(#3769a0, #85bfff);
+  fill-opacity: 0.13;
+  stroke: light-dark(#3769a0, #85bfff);
+  stroke-dasharray: 5 3;
+}
+
+.meta-page dl.info {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+  font-size: 0.875rem;
+  transition: opacity 180ms, visibility 180ms;
+}
+
+.meta-page dl.info dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.meta-page .tooltip {
+  position: fixed;
+  z-index: 1;
+  max-width: min(20rem, calc(100vw - 3rem));
+  padding: 0.75rem 0.9rem;
+  background: Canvas;
+  border: 1px solid color-mix(in srgb, CanvasText 25%, transparent);
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 18px #0003;
+}
+
+.meta-page .tooltip[hidden] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.meta-selection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block: 0.75rem;
+}
+
+.meta-selection p {
+  margin: 0;
+  font-weight: 650;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #chart .dots circle,
+  .meta-page dl.info {
+    transition: none;
+  }
+}
+
+@media (max-width: 35rem) {
+  #chart .axis,
+  #chart .axis-label {
+    font-size: 26px;
+  }
+}
