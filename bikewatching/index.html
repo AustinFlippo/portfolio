@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bikewatching</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.css">
+  <link rel="stylesheet" href="map.css">
+  <script defer src="https://api.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script defer src="map.js"></script>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Bikewatching</h1>
+      <p>March 2024 Bluebikes traffic in Boston and Cambridge.</p>
+    </div>
+    <div class="time-filter">
+      <label for="time-slider">Filter by time</label>
+      <input id="time-slider" type="range" min="-1" max="1440" value="-1" aria-describedby="time-window" disabled>
+      <div class="time-display">
+        <time id="selected-time" hidden></time>
+        <em id="any-time">(any time)</em>
+      </div>
+      <small id="time-window">Within one hour of the selected time (Boston time)</small>
+    </div>
+  </header>
+  <main>
+    <div id="map" aria-label="Interactive map of Bluebikes stations and bike lanes"></div>
+    <ul class="legend" aria-label="Map legend">
+      <li class="lane-key">Bike lanes</li>
+      <li class="arrivals">More arrivals</li>
+      <li class="balanced">Balanced</li>
+      <li class="departures">More departures</li>
+      <li class="volume-key">Larger circle = more traffic</li>
+    </ul>
+    <p id="map-status" role="status">Loading bike lanes and station traffic…</p>
+    <noscript><p>Enable JavaScript to use the map.</p></noscript>
+  </main>
+</body>
+</html>

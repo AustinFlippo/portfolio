@@ -50,6 +50,13 @@
     "url": ""
   },
   {
+    "title": "Bikewatching (Lab 7)",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "An interactive map of March 2024 Bluebikes traffic. Explore Boston and Cambridge bike lanes and compare station arrivals and departures throughout the day.",
+    "url": "bikewatching/"
+  },
+  {
     "title": "TritonPlanner",
     "year": 2025,
     "image": "images/project-placeholder.svg",
