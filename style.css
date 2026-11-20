@@ -321,13 +321,13 @@ time {
 }
 
 #chart .axis {
-  font-size: 15px;
+  font-size: 18px;
   pointer-events: none;
 }
 
 #chart .axis-label {
   fill: currentColor;
-  font-size: 16px;
+  font-size: 20px;
   text-anchor: middle;
   pointer-events: none;
 }
@@ -352,7 +352,14 @@ time {
   cursor: pointer;
   transform-box: fill-box;
   transform-origin: center;
-  transition: transform 200ms, fill-opacity 200ms;
+  r: var(--r);
+  transition: cx 200ms, cy 200ms, r 200ms, transform 200ms, fill-opacity 200ms;
+}
+
+@starting-style {
+  #chart .dots circle {
+    r: 0;
+  }
 }
 
 #chart .dots circle:is(:hover, :focus-visible) {
@@ -429,5 +436,148 @@ time {
   #chart .axis,
   #chart .axis-label {
     font-size: 26px;
+  }
+}
+
+/* Lab 8: scroll through commits, then compare one dot per surviving line. */
+body.meta-page {
+  max-width: 75rem;
+}
+
+#scrolly-1 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 2rem;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
+  padding: 1rem;
+  background: Canvas;
+  border: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+  border-radius: 0.5rem;
+}
+
+#scatter-story .step {
+  box-sizing: border-box;
+  min-height: 65vh;
+  padding: 1rem;
+  border-left: 3px solid transparent;
+}
+
+#scatter-story .step.is-active {
+  border-color: var(--color-accent);
+  background: color-mix(in oklch, var(--color-accent), Canvas 94%);
+}
+
+.commit-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.commit-filter input {
+  flex: 1;
+  min-width: 6rem;
+}
+
+.commit-filter time {
+  flex-basis: 100%;
+  font-variant-numeric: tabular-nums;
+}
+
+#chart-description,
+#visible-count,
+#scatter-plot .meta-selection,
+#scatter-plot .stats dd {
+  font-size: 0.875rem;
+}
+
+#file-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+#file-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#file-legend .swatch,
+#files .loc {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  flex: 0 0 0.5rem;
+}
+
+#files {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  gap: 1rem;
+}
+
+#files > .file {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+#files dt {
+  overflow-wrap: anywhere;
+  color: inherit;
+  font-size: 1rem;
+}
+
+#files small {
+  display: block;
+  color: light-dark(#595959, #bfbfbf);
+  font-size: 0.875rem;
+}
+
+#files dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 0.15rem;
+  margin: 0;
+  padding-top: 0.5rem;
+}
+
+#files .loc {
+  background: var(--color);
+}
+
+@media (max-width: 50rem) {
+  #scrolly-1 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #scatter-plot {
+    grid-row: 1;
+    top: 0;
+    z-index: 1;
+    padding: 0.5rem;
+  }
+
+  #chart svg {
+    max-height: 32vh;
+  }
+
+  #scatter-story .step {
+    min-height: 80vh;
+  }
+
+  #files {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   }
 }
